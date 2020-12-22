@@ -1,0 +1,24 @@
+<div>
+  <div>
+    <label>
+      Title
+      <input [(ngModel)]="title" type="text" placeholder="Enter your title">
+    </label>
+  </div>
+  <br/>
+  <div>
+    <label>
+      Post
+      <input [(ngModel)]="post" type="text" placeholder="Enter your post">
+    </label>
+  </div>
+  <br/>
+  <button (click)="addPost()">Add post</button>
+</div>
+<br/>
+<br/>
+<div *ngFor="let item of newsfeedItems">
+  <div>{{ item.title }}</div>
+  <div>{{ item.post }}</div>
+  <br>
+</div>
