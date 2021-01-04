@@ -6,16 +6,16 @@ import (
 	"net/http"
 )
 
+type newsfeedPost struct {
+	Title string `json:"title"`
+	Post  string `json:"post"`
+}
+
 func NewsfeedGet(feed newsfeed.Getter) gin.HandlerFunc {
 	return func(c *gin.Context) {
 		results := feed.GetAll()
 		c.JSON(http.StatusOK, results)
 	}
-}
-
-type newsfeedPost struct {
-	Title string `json:"title"`
-	Post  string `json:"post"`
 }
 
 func NewsfeedPost(feed newsfeed.Adder) gin.HandlerFunc {

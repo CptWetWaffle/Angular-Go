@@ -20,6 +20,7 @@ func main() {
 		api.GET("/ping", handler.PingGet())
 		api.GET("/newsfeed", handler.NewsfeedGet(feed))
 		api.POST("/newsfeed", handler.NewsfeedPost(feed))
+		api.GET("/loc", handler.LocationPost())
 	}
 
 	_ = r.Run(":3000")
