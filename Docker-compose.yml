@@ -5,7 +5,11 @@ services:
       context: client
       dockerfile: .dockerfile
     ports:
-    - "4200:80"
+    - "4201:80"
+    - "4200:443"
+    volumes:
+      - ./data/certbot/conf:/etc/letsencrypt
+      - ./data/certbot/www:/var/www/certbot
 
   backend:
     container_name: gonewsfeedapi
