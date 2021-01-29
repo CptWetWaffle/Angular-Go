@@ -1,8 +1,8 @@
 package main
 
 import (
-	"SimpleApp/api/handler"
-	"SimpleApp/api/platform/newsfeed"
+	"Angular-Go/api/server/handler"
+	"Angular-Go/api/server/platform/newsfeed"
 	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 )

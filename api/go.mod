@@ -1,4 +1,4 @@
-module SimpleApp/api
+module Angular-Go/api
 
 go 1.15
 

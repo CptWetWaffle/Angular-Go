@@ -1,7 +1,7 @@
 package handler
 
 import (
-	"SimpleApp/api/platform/newsfeed"
+	"Angular-Go/api/server/platform/newsfeed"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
