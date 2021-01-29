@@ -9,11 +9,27 @@ import {HttpClientModule} from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'
+import {AboutComponent} from "./about/about.component";
+import {ExperienceComponent} from "./experience/experience.component";
+import {InterestComponent} from "./interest/interest.component";
+import {ProjectComponent} from "./project/project.component";
+import {SkillComponent} from "./skill/skill.component";
+import {VolunteeringComponent} from "./volunteering/volunteering.component";
+import {EducationComponent} from "./education/education.component";
+import {NavBarComponent} from "./nav-bar/nav-bar.component";
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    AboutComponent,
+    EducationComponent,
+    ExperienceComponent,
+    InterestComponent,
+    ProjectComponent,
+    SkillComponent,
+    VolunteeringComponent,
+    NavBarComponent
   ],
   imports: [
     BrowserModule,

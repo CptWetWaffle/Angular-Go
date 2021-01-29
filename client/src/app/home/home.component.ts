@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {HttpClient} from "@angular/common/http";
-import {Task} from "protractor/built/taskScheduler";
 import {environment} from "../../environments/environment.prod";
+import {ViewportScroller} from "@angular/common";
 
 interface INewsfeedItem {
   title: string,
@@ -13,14 +13,13 @@ interface INewsfeedItem {
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
+
 export class HomeComponent implements OnInit {
   public title = '';
   public post = '';
   public newsfeedItems: INewsfeedItem[] = [];
 
-  constructor(private httpClient: HttpClient) {
-
-  }
+  constructor(private httpClient: HttpClient, private viewPortScroller: ViewportScroller) {  }
 
   async ngOnInit() {
     await this.loadNewsItems();
@@ -41,5 +40,4 @@ export class HomeComponent implements OnInit {
     this.title = '';
     this.post = '';
   }
-
 }
